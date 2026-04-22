@@ -5,7 +5,7 @@ const products = [
         name: "Shirts for men",
         category: "shirt",
         price: 499,
-        image: "pics/shirt.png",
+        image: "pics/tshirt.png",
         rating: 4.8,
         reviews: 124
     },
