@@ -34,7 +34,7 @@ function addToCart(productId) {
     
     saveCart();
     updateCartUI();
-    showToast(`✨ ${product.name} added to cart`);
+    showToast(`✨ ₹{product.name} added to cart`);
     animateCartIcon();
 }
 
@@ -83,7 +83,7 @@ function updateCartUI() {
     } else {
         cartItemsContainer.innerHTML = cart.map(item => `
             <div class="cart-item">
-                <img src="${item.image}" class="cart-item-img" alt="${item.name}">
+                <img src="₹{item.image}" class="cart-item-img" alt="₹{item.name}">
                 <div class="cart-item-info">
                     <div class="cart-item-title">${item.name}</div>
                     <div class="cart-item-price">$${item.price.toFixed(2)}</div>
