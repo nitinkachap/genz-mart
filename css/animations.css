@@ -1,0 +1,228 @@
+/* ========================================
+   GENZ MART - ANIMATIONS
+   All animations and keyframes
+   ======================================== */
+
+/* ===== PAGE LOAD ANIMATIONS ===== */
+.hero {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.filters-section {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.products-grid .product-card {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.products-grid .product-card:nth-child(1) { animation-delay: 0.05s; }
+.products-grid .product-card:nth-child(2) { animation-delay: 0.1s; }
+.products-grid .product-card:nth-child(3) { animation-delay: 0.15s; }
+.products-grid .product-card:nth-child(4) { animation-delay: 0.2s; }
+.products-grid .product-card:nth-child(5) { animation-delay: 0.25s; }
+.products-grid .product-card:nth-child(6) { animation-delay: 0.3s; }
+
+.newsletter {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== CART BUMP ANIMATION ===== */
+.cart-bump {
+    animation: cartBump 0.3s ease;
+}
+
+@keyframes cartBump {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+        color: var(--primary);
+    }
+}
+
+/* ===== CART SLIDE IN ===== */
+.cart-overlay.open .cart-panel {
+    animation: slideInRight 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ===== CART ITEM FADE IN ===== */
+.cart-item {
+    animation: fadeInItem 0.25s ease forwards;
+}
+
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== PULSE GLOW ===== */
+.btn-add-to-cart:active {
+    animation: pulseGlow 0.3s ease;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+    }
+}
+
+/* ===== SPIN ANIMATION FOR SOCIAL ICONS ===== */
+.social-icons i:hover {
+    animation: spinIcon 0.4s ease;
+}
+
+@keyframes spinIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== SHAKE ANIMATION (for errors) ===== */
+.shake {
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ===== FLOAT ANIMATION (for hero badge) ===== */
+.hero-badge {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===== RIPPLE EFFECT ===== */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.ripple:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+/* ===== SCROLL REVEAL (optional) ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== LOADING SPINNER ===== */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--glass-border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== SMOOTH SCROLL INDICATOR ===== */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s;
+}
+
+/* ===== GLOW TEXT ANIMATION ===== */
+.glow-text {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(139, 92, 246, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+    }
+}

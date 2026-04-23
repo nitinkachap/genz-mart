@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenZ Mart | Level Up Your Streetwear</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ===== NAVBAR ===== -->
+        <nav class="navbar glass">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>GENZ MART</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">Shop</a>
+                <a href="#">New</a>
+                <a href="#">Drops</a>
+                <a href="#">Deals</a>
+            </div>
+            <div class="cart-icon" id="cartIcon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </nav>
+
+        <!-- ===== HERO SECTION ===== -->
+        <section class="hero">
+            <div class="hero-content glass">
+                <span class="hero-badge">DROP 03 • LIVE NOW</span>
+                <h1>LEVEL UP YOUR <span class="gradient-text">STREETWEAR</span></h1>
+                <p>GenZ Shop. Real vibes. Limited drops every week.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="shopNowBtn">SHOP NOW →</button>
+                    <button class="btn-secondary">EXPLORE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CATEGORY FILTERS ===== -->
+        <div class="filters-section">
+            <div class="filter-chips">
+                <button class="chip active" data-category="all">All</button>
+                <button class="chip" data-category="hoodies">Hoodies</button>
+                <button class="chip" data-category="tees">Tshirts</button>
+                <button class="chip" data-category="accessories">Accessories</button>
+                <button class="chip" data-category="sneakers">Sneakers</button>
+                <button class="chip" data-category="bottoms">Bottoms</button>
+            </div>
+        </div>
+
+        <!-- ===== PRODUCTS GRID ===== -->
+        <div class="products-section">
+            <div class="section-title">
+                <h2>🔥 HOT DROPS</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be injected here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- ===== NEWSLETTER ===== -->
+        <div class="newsletter glass">
+            <h3>Join the crew</h3>
+            <p>Get 10% off your first order + exclusive drops</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="your@email.com">
+                <button>Subscribe →</button>
+            </div>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">GENZ MART</div>
+                <div class="footer-links">
+                    <a href="#">Contact</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy</a>
+                </div>
+                <div class="social-icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-discord"></i>
+                </div>
+            </div>
+            <div class="copyright">© 2025 GenZ Mart — All rights reserved</div>
+        </footer>
+    </div>
+
+    <!-- ===== CART SIDEBAR ===== -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-panel glass">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-bag"></i> Your Cart</h3>
+                <button class="close-cart" id="closeCartBtn">✕</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotalPrice">₹0.00</span>
+                </div>
+                <button class="checkout-btn">CHECKOUT →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- JavaScript Modules -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
